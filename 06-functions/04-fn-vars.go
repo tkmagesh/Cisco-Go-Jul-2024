@@ -25,20 +25,23 @@ func main() {
 	}
 	msg := greetUser("Suresh")
 	fmt.Println(msg)
-	/*
-		// 2 arguments, 1 return value
-		result := func(x, y int) int {
-			return x + y
-		}(100, 200)
-		fmt.Println("add result :", result)
 
-		// 2 arguments, 2 return values
-		// using named result(s)
-		quotient, remainder := func(x, y int) (quotient, remainder int) { // quotient & remainder are declared and initialized with the zero values of int
-			quotient, remainder = x/y, x%y
-			return
-		}(100, 7)
-		fmt.Printf("q = %d and r = %d\n", quotient, remainder)
-	*/
+	// 2 arguments, 1 return value
+	var add func(int, int) int
+	add = func(x, y int) int {
+		return x + y
+	}
+	result := add(100, 200)
+	fmt.Println("add result :", result)
+
+	// 2 arguments, 2 return values
+	// using named result(s)
+	var divide func(int, int) (int, int)
+	divide = func(x, y int) (quotient, remainder int) { // quotient & remainder are declared and initialized with the zero values of int
+		quotient, remainder = x/y, x%y
+		return
+	}
+	quotient, remainder := divide(100, 7)
+	fmt.Printf("q = %d and r = %d\n", quotient, remainder)
 
 }
