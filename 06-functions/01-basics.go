@@ -11,8 +11,15 @@ func main() {
 
 	// fmt.Println(divide(100, 7))
 	multiplier, divisor := 100, 7
+
 	quotient, remainder := divide(multiplier, divisor)
 	fmt.Printf("Dividing %d by %d, quotient = %d and remainder = %d\n", multiplier, divisor, quotient, remainder)
+
+	// Using _
+	/*
+		quotient, _ := divide(multiplier, divisor)
+		fmt.Printf("Dividing %d by %d, quotient = %d \n", multiplier, divisor, quotient)
+	*/
 }
 
 // 0 arguments, 0 return values
@@ -42,8 +49,16 @@ func add(x, y int) int {
 }
 
 // 2 arguments, 2 return values
+/*
 func divide(x, y int) (int, int) {
 	quotient := x / y
 	remainder := x % y
 	return quotient, remainder
+}
+*/
+
+// using named result(s)
+func divide(x, y int) (quotient, remainder int) { // quotient & remainder are declared and initialized with the zero values of int
+	quotient, remainder = x/y, x%y
+	return
 }
