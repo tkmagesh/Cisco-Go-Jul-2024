@@ -60,4 +60,22 @@
     - One build per deployment platform 
     - Builtin tooling support for cross-compilation
 
+## Program Structure
+
+### Compile a go program
+```
+go build [file_name.go]
+```
+```
+go build -o [binary_name] [file_name.go]
+```
+
+### Compile & Execute
+```
+go run [file_name.go]
+```
+
+## Data Types
+
+
 
