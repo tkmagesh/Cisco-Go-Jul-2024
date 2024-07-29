@@ -14,8 +14,8 @@ func main() {
 	*/
 
 	// simulate nested-if in switch case
-
-	switch no := 21; {
+	no := 21
+	switch {
 	case no%2 == 0:
 		fmt.Println("even number")
 	case no%2 == 1:
