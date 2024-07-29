@@ -154,3 +154,15 @@ GOOS=windows GOARCH=amd64 go build 01-hello-world.go
 #### Package Scope
 - CANNOT use :=
 - Can have unused variables
+
+## Functions
+- Functions can return more than 1 result
+- Variadic functions
+- Anonymous functions
+    - functions defined in another function
+    - cannot have a name
+    - have to be immediately invoked
+- Higher Order Functions
+    - Assign functions as values to variables
+    - Pass function as an argument to other functions
+    - Return functions as return values
