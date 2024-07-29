@@ -75,6 +75,34 @@ go build -o [binary_name] [file_name.go]
 go run [file_name.go]
 ```
 
+### Cross Compilatation
+#### To get the list of go tool specific environment variables
+```
+go env
+```
+#### Environment variables related to cross compilation
+- GOOS
+- GOARCH
+```
+go env GOOS GOARCH
+```
+#### To change the environment variables
+```
+go env -w [env_var_1]=[val_1] [env_var_2]=[val_2]
+```
+#### To get the list of supported platforms
+```
+go tool dist list
+```
+#### To cross compile
+```
+GOOS=[target_os] GOARCH=[target_arch] go build [file_name.go]
+```
+ex:
+```
+GOOS=windows GOARCH=amd64 go build 01-hello-world.go
+```
+
 ## Data Types
 
 

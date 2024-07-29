@@ -2,6 +2,7 @@
 package main
 
 /* import dependency packages */
+import "fmt"
 
 /* package scoped variables / constants / type declarations */
 
@@ -9,7 +10,9 @@ package main
 
 /* main function */
 func main() {
-	print("Hello World!")
+	// print("Hello World!")
+	// fmt.Print("Hello World!\n")
+	fmt.Println("Hello World!")
 }
 
 /* other functions */
