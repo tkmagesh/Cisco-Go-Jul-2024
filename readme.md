@@ -171,4 +171,6 @@ GOOS=windows GOARCH=amd64 go build 01-hello-world.go
 ### Array
 - Fixed sized typed collection
 ### Slice
+- Dynamic sized typed collection
+![image](./images/slices.png)
 ### Map
