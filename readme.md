@@ -188,3 +188,13 @@ GOOS=windows GOARCH=amd64 go build 01-hello-world.go
 
 ## Deferred Functions
 - Postpone the excecution of a function until the current function execution is completed
+
+## Panic & Recovery
+### Panic
+- Represents the state of the application where the application execution cannot proceed further
+- the function "deferred" before the panic will be executed
+- create a panic
+    - panic()
+
+### Recovery
+- recover() returns the error that resulted in a panic
