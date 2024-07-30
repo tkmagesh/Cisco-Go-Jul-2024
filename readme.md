@@ -198,3 +198,32 @@ GOOS=windows GOARCH=amd64 go build 01-hello-world.go
 
 ### Recovery
 - recover() returns the error that resulted in a panic
+
+## Modules & Packages
+### Module
+- Any code that has to be versioned and deployed together
+- Typically a folder with "go.mod" file
+- go.mod
+    - name
+        - typically the repo path
+    - go runtime version
+    - dependencies 
+### Package
+- Internal organization of a module
+- Typically folders in a module
+- All the code across all the files in a package are considered to be belonging to the same package
+
+### Commands
+#### Create a module
+```
+go mod init <module_name>
+```
+#### Run a module
+```
+go run .
+```
+#### Compile a module
+```
+go build .
+go build -o [binary_name] .
+```
