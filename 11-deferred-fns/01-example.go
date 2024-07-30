@@ -13,6 +13,8 @@ func main() {
 
 func f1() {
 	fmt.Println("[f1] started")
+	x := 100
+	defer fmt.Println("	[f1] deferred - x :", x)
 	/*
 		defer func() {
 			fmt.Println("	[f1] deferred - 1")
@@ -31,6 +33,7 @@ func f1() {
 
 	f2()
 	fmt.Println("[f1] completed")
+	x = 200
 }
 
 func f2() {
