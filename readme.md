@@ -227,3 +227,38 @@ go run .
 go build .
 go build -o [binary_name] .
 ```
+#### Add reference to 3rd party modules
+```
+go get [module_name]
+```
+Note : dependencies are download in $GOPATH/pkg folder
+
+#### Upgrade the dependencies
+```
+go get -up [module_name]
+```
+#### Update the dependency references go.mod file 
+```
+go mod tidy
+```
+#### Download the dependencies documented in the go.mod file
+```
+go mod download
+```
+#### Localize the dependencies (in /vendor folder)
+```
+go mod vendor
+```
+
+#### Install a module as a CLI
+```
+go install [module_name]
+```
+Note : binary is installed in the $GOPATH/bin folder
+#### Useful module commands
+- go mod graph
+- go mod why
+
+
+#### Module command references
+- https://go.dev/ref/mod

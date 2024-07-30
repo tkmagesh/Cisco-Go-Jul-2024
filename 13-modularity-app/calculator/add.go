@@ -7,6 +7,7 @@ func init() {
 }
 
 func Add(x, y int) int {
-	opCount++
+	// opCount++
+	opCount["Add"]++
 	return x + y
 }

@@ -3,12 +3,14 @@ package main
 import (
 	"fmt"
 
+	"github.com/fatih/color"
 	calc "github.com/tkmagesh/cisco-go-jul-2024/13-modularity-app/calculator"
 	"github.com/tkmagesh/cisco-go-jul-2024/13-modularity-app/calculator/utils"
 )
 
 func main() {
-	fmt.Println("modularity app executed")
+	color.Red("modularity app executed")
+
 	/*
 		fmt.Println(calculator.Add(100, 200))
 		fmt.Println(calculator.Subtract(100, 200))
