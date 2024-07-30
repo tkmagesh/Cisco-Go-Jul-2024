@@ -174,3 +174,4 @@ GOOS=windows GOARCH=amd64 go build 01-hello-world.go
 - Dynamic sized typed collection
 ![image](./images/slices.png)
 ### Map
+- Typed collection of key-value pairs
