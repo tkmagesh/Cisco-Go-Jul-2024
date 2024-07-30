@@ -185,3 +185,6 @@ GOOS=windows GOARCH=amd64 go build 01-hello-world.go
     - errors.New()
     - fmt.Errorf()
     - custom structs implementing "error" interface
+
+## Deferred Functions
+- Postpone the excecution of a function until the current function execution is completed
