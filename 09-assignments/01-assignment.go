@@ -15,13 +15,25 @@ func main() {
 	var start, end int
 	fmt.Println("Enter the range :")
 	fmt.Scanln(&start, &end)
-NO_LOOP:
+	primes := genPrimes(start, end)
+	fmt.Println(primes)
+}
+
+func genPrimes(start, end int) []int {
+	var primes []int
 	for no := start; no <= end; no++ {
-		for i := 2; i <= (no / 2); i++ {
-			if no%i == 0 {
-				continue NO_LOOP
-			}
+		if isPrime(no) {
+			primes = append(primes, no)
 		}
-		fmt.Println("Prime No :", no)
 	}
+	return primes
+}
+
+func isPrime(no int) bool {
+	for i := 2; i <= (no / 2); i++ {
+		if no%i == 0 {
+			return false
+		}
+	}
+	return true
 }
