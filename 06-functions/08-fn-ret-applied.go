@@ -28,7 +28,19 @@ func subtract(x, y int) {
 	fmt.Println("Subtract Result :", x-y)
 }
 
+/*
 func getLogOperation(operFn func(x, y int)) func(x, y int) {
+	return func(x, y int) {
+		log.Println("Invocation started")
+		operFn(x, y)
+		log.Println("Invocation completed")
+	}
+}
+*/
+
+type OperationFn func(x, y int)
+
+func getLogOperation(operFn OperationFn) OperationFn {
 	return func(x, y int) {
 		log.Println("Invocation started")
 		operFn(x, y)
