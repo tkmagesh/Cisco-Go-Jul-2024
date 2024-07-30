@@ -175,3 +175,13 @@ GOOS=windows GOARCH=amd64 go build 01-hello-world.go
 ![image](./images/slices.png)
 ### Map
 - Typed collection of key-value pairs
+
+## Errors
+- Errors are just values returned from functions
+- By convention, errors are the last value in the list of return values
+- Errors are objects implementing "error" interface
+    - Error() string
+- Creating a error
+    - errors.New()
+    - fmt.Errorf()
+    - custom structs implementing "error" interface
