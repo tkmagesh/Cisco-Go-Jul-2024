@@ -19,8 +19,7 @@ func main() {
 
 // producer
 func genNos(ch chan<- int) {
-	var i int
-	for ; ; i++ {
+	for i := 0; ; i++ {
 		ch <- (i + 1) * 10
 		if rand.Intn(100)%3 == 0 {
 			fmt.Println("All the numbers are produced")
