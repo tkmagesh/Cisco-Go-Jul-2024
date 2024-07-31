@@ -312,3 +312,10 @@ ch <- 100
 // ex:
 <- ch
 ```
+#### Channel Behaviors
+##### Receive Operation
+- Always a blocking operation
+- The receive operation is blocked until data becomes available through the channel
+##### Send Operation
+- The send operation is blocked until a receive operation is initiated
+![image](./images/channel-behaviors.png)
