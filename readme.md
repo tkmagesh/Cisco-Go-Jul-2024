@@ -267,3 +267,12 @@ Note : binary is installed in the $GOPATH/bin folder
 ### WaitGroup
 - Semaphore based counter
 - Has the ability to block the execution of a function until the counter becomes 0
+
+### Race Detection
+```
+go run --race [file_name.go]
+```
+
+```
+go build --race [file_name.go]
+```
