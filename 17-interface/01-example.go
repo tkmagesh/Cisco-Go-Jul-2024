@@ -52,7 +52,9 @@ func PrintArea(x interface{}) {
 }
 */
 
-func PrintArea(x interface{ Area() float64 }) {
+type AreaFinder interface{ Area() float64 }
+
+func PrintArea(x AreaFinder) {
 	fmt.Println("Area :", x.Area())
 }
 
@@ -70,14 +72,18 @@ func (r Rectangle) Perimeter() float64 {
 	return 2 * (r.Height + r.Width)
 }
 
-func PrintPerimeter(x interface{ Perimeter() float64 }) {
+type PerimeterFinder interface{ Perimeter() float64 }
+
+func PrintPerimeter(x PerimeterFinder) {
 	fmt.Println("Perimeter :", x.Perimeter())
 }
 
-func PrintStats(x interface {
+type ShapeStatsFinder interface {
 	interface{ Area() float64 }
 	interface{ Perimeter() float64 }
-}) {
+}
+
+func PrintStats(x ShapeStatsFinder) {
 	PrintArea(x)      // x => interface{ Area() float64 }
 	PrintPerimeter(x) // x => interface { Perimeter() float64}
 }
