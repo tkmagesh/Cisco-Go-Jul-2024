@@ -14,19 +14,19 @@ func main() {
 	var start, end int
 	fmt.Println("Enter the range :")
 	fmt.Scanln(&start, &end)
-	resultCh := primeDispatcher(start, end)
+	resultCh := primeDispatcher(start, end, 5)
 	for primeNo := range resultCh {
 		fmt.Println("prime :", primeNo)
 	}
 	fmt.Println("Done")
 }
 
-func primeDispatcher(start, end int) <-chan int {
+func primeDispatcher(start, end int, workerCount int) <-chan int {
 	resultCh := make(chan int)
 	go func() {
 		noCh := make(chan int)
 		workerWg := &sync.WaitGroup{}
-		for range 10 {
+		for range workerCount {
 			workerWg.Add(1)
 			go primeWorker(noCh, resultCh, workerWg)
 		}
