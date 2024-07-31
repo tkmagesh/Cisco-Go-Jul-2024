@@ -3,7 +3,8 @@ package main
 import "fmt"
 
 func main() {
-	var x interface{}
+	// var x interface{}
+	var x any
 	/*
 		x = 100
 		x = true
@@ -45,6 +46,8 @@ func main() {
 		fmt.Printf("x is a float64, 0.01%% of x = %v\n", val*0.01)
 	case struct{}:
 		fmt.Println("x is an 0 byte struct")
+	case interface{ String() string }:
+		fmt.Println(val.String())
 	default:
 		fmt.Println("x is an unknown type!")
 	}
